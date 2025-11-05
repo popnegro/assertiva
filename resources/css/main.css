@@ -1,0 +1,149 @@
+.body{
+    background-color:#eee;
+}
+
+.card{
+    padding:10px;
+    border:none;
+    cursor:pointer;
+}
+
+.card:hover{
+    background-color:#eee;
+}
+
+.card span{
+    font-size:14px;
+}
+
+.profile-card {
+    max-width: 638px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.portrait {
+    max-width: 638px;
+    height: 538px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-card img {
+    transition: all linear 0.25s;
+}
+
+.profile-card img,
+.awareness {
+    transition: all linear 0.25s;
+}
+
+.profile-card .profile-name {
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+    font-size: 30px;
+    color: #FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.profile-card .profile-icons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #FFF;
+    transition: all linear 0.25s;
+}
+
+.profile-card .profile-username {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: #FFF;
+    font-size: 13px;
+    transition: all linear 0.25s;
+}
+
+.profile-card .profile-icons .fa {
+    margin: 5px;
+}
+
+.profile-card:hover img {
+    filter: grayscale(100%);
+}
+
+.profile-card:hover .profile-name {
+    bottom: 80px;
+}
+
+.profile-card:hover .profile-username {
+    bottom: 60px;
+}
+
+.profile-card:hover .profile-icons {
+    right: 40px;
+}
+
+#navcol-1 {
+  font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .navbar-dark .navbar-nav .nav-link {
+    float: right;
+  }
+}
+
+.masonry-wrapper {
+            /* Definimos el número de columnas. 
+               CSS se encargará de distribuir el contenido. */
+            
+            column-count: 1; /* Por defecto en móvil */
+            column-gap: 1.5rem; /* Espacio entre columnas (equivale a gap-6 en Tailwind) */
+        }
+
+        /* Media queries para pantallas más grandes */
+        @media (min-width: 768px) { /* 'md' en Tailwind */
+            .masonry-wrapper {
+                column-count: 2;
+            }
+        }
+        
+        @media (min-width: 1024px) { /* 'lg' en Tailwind */
+            .masonry-wrapper {
+                column-count: 3;
+            }
+        }
+
+        /* Cada tarjeta (card) */
+        .masonry-item {
+            /* Evita que una tarjeta se parta entre dos columnas */
+            break-inside: avoid;
+            
+            /* Espacio inferior para cada tarjeta */
+            margin-bottom: 1.5rem; /* equivale a mb-6 en Tailwind */
+
+            /* Transición suave para el efecto hover */
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Efecto Hover: escalar y aumentar la sombra */
+        .masonry-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            /* (Sombra equivale a shadow-xl en Tailwind) */
+        }
