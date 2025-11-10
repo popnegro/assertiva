@@ -1,0 +1,401 @@
+:root {
+    --primary: #001E41;
+    --secondary: #0098C8;
+    --dark: #000000;
+    --gray: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cc0000;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Mega Menu Styles */
+.mega-dropdown {
+    position: static;
+}
+
+.mega-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 2rem 0;
+    background: #2d2d2d;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    margin-top: 0;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.mega-menu-title {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.mega-menu .dropdown-item {
+    padding: 0.6rem 1rem;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin-bottom: 0.25rem;
+}
+
+.mega-menu .dropdown-item:hover {
+    background-color: rgba(238, 0, 0, 0.15);
+    color: white;
+    padding-left: 1.5rem;
+}
+
+.mega-menu .dropdown-item i {
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.mega-menu .dropdown-item:hover i {
+    transform: translateX(3px);
+}
+
+/* Regular Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(238, 0, 0, 0.1);
+    color: var(--primary);
+    padding-left: 2rem;
+}
+
+.btn-danger {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(238, 0, 0, 0.3);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 75vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231a1a1a" width="1200" height="600"/><g fill-opacity="0.1"><polygon fill="%23EE0000" points="1200 0 900 600 1200 600"/><polygon fill="%23cc0000" points="0 600 300 0 0 0"/></g></svg>');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-section p {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-section .btn {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+/* Quick Access Cards */
+.quick-access-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.quick-access-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Documentation Category Cards */
+.doc-category-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.doc-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.doc-category-card .icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.doc-category-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Icon Box */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.quick-access-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.quick-access-card a {
+    transition: all 0.3s ease;
+}
+
+.quick-access-card:hover a {
+    padding-left: 0.5rem;
+}
+
+/* Resources Section */
+.resource-item {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.resource-item:hover {
+    background-color: rgba(238, 0, 0, 0.05);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.resource-item:hover .icon-circle {
+    transform: scale(1.15);
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark) !important;
+}
+
+.footer a:hover {
+    color: var(--primary) !important;
+    padding-left: 0.5rem;
+}
+
+.social-links a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .mega-menu {
+        position: relative;
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .mega-menu .col-md-3 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button outline light custom */
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--secondary);
+    border-color: white;
+}
+
+/* Custom scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #f1f1f1;
+}
+
+/* Mega menu scrollbar */
+.mega-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mega-menu::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.mega-menu::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}

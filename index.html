@@ -1,317 +1,471 @@
 <!DOCTYPE html>
-<html lang="es-ar" dir="ltr">
+<html lang="es">
+
 <head>
-  <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>Assertiva | Home</title>
-<meta name="description" content="Explore Bootstrap grid examples with responsive columns, nested layouts, and flexible alignments — essential for building clean and adaptive designs.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="">
-<meta property="og:title" content="Bootstrap Grid Examples">
-<meta property="og:description" content="Explore Bootstrap grid examples with responsive columns, nested layouts, and flexible alignments — essential for building clean and adaptive designs.">
-<meta property="og:image" content="https://freefrontend.com/">
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="freefrontend.com">
-<meta name="twitter:creator" content="@FreeFrontend">
-<meta name="twitter:url" content="">
-<meta name="twitter:title" content="Bootstrap Grid Examples">
-<meta name="twitter:description" content="Explore Bootstrap grid examples with responsive columns, nested layouts, and flexible alignments — essential for building clean and adaptive designs.">
-<meta name="twitter:image" content=""> 
-<link rel="icon" href="https://freefrontend.com/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link href="resources/css/main.css" rel="stylesheet">
-<script type="module" src="resources/js/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>Componentes Bootstrap - Estilo Red Hat</title>
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="resources/css/style.css">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg py-3 navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="https://library.livecanvas.com/sections/">
-                <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" width="48" height="48" class="align-middle me-1 img-fluid" alt="My Website">
-                My Site</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar4" aria-controls="myNavbar4" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navbar with Mega Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="brand-logo">RH</div>
+                <span class="ms-2 fw-bold">Red Hat Enterprise Linux 10</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-
-            <div class="lc-block collapse navbar-collapse ms-lg-auto" id="myNavbar4">
-                <div lc-helper="shortcode" class="live-shortcode  position-lg-absolute translate-middle-lg top-lg-50 start-lg-50 justify-content-between "> <!--  lc_nav_menu -->
-                    <ul id="menu-menu-1" class="navbar-nav">
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32739"><a href="https://library.livecanvas.com/starters" class="nav-link ">BS5 Page Templates</a></li>
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home nav-item nav-item-32738"><a href="https://library.livecanvas.com/sections/" class="nav-link ">BS5 Snippets</a></li>
-                    </ul> <!-- /lc_nav_menu -->
-                </div>
-
-                <div lc-helper="shortcode" class="live-shortcode ms-auto"> <!--  lc_nav_menu -->
-                    <ul id="menu-secondary" class="navbar-nav">
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown nav-item nav-item-33131"><a href="#" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Categories</a>
-                            <ul class="dropdown-menu  depth_0">
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33132"><a href="https://library.livecanvas.com/sections/category/cta/" class="dropdown-item ">CTA</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33137"><a href="https://library.livecanvas.com/sections/category/contact/" class="dropdown-item ">Contact</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33136"><a href="https://library.livecanvas.com/sections/category/faq/" class="dropdown-item ">FAQ</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33138"><a href="https://library.livecanvas.com/sections/category/flex-layout/" class="dropdown-item ">Flex Layout</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33139"><a href="https://library.livecanvas.com/sections/category/footers/" class="dropdown-item ">Footers</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33140"><a href="https://library.livecanvas.com/sections/category/headers/" class="dropdown-item ">Headers</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33134"><a href="https://library.livecanvas.com/sections/category/pricing/" class="dropdown-item ">Pricing Tables</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33133"><a href="https://library.livecanvas.com/sections/category/team/" class="dropdown-item ">Team</a></li>
-                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category nav-item nav-item-33135"><a href="https://library.livecanvas.com/sections/category/testimonials/" class="dropdown-item ">Testimonials</a></li>
-                            </ul>
-                        </li>
-                    </ul> <!-- /lc_nav_menu -->
-                </div>
-
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Documentation Mega Menu -->
+                    <li class="nav-item dropdown mega-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-book me-1"></i> Documentación
+                        </a>
+                        <div class="dropdown-menu mega-menu">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">Comenzar</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-text me-2"></i>Notas de lanzamiento</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-lightbulb me-2"></i>Planificación</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-list-check me-2"></i>Consideraciones de adopción</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-left-right me-2"></i>Diferencias RHEL 9 vs 10</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">Instalación y actualización</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-disc me-2"></i>Instalación desde medios</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-wifi me-2"></i>Instalación por red</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Instalación automática</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-up-circle me-2"></i>Actualizar desde RHEL 9</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-image me-2"></i>Crear imágenes con Image Builder</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">Administración del sistema</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-robot me-2"></i>Automatización con system roles</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-terminal me-2"></i>Asistente de línea de comandos</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-window-desktop me-2"></i>Administración GNOME</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-database me-2"></i>Servidores de bases de datos</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-diagram-3 me-2"></i>Servicios de infraestructura</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-envelope me-2"></i>Servidores de correo y web</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6 class="mega-menu-title">Configuración avanzada</h6>
+                                        <ul class="list-unstyled">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-shield-check me-2"></i>Seguridad</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-hdd-network me-2"></i>Redes</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-badge me-2"></i>Gestión de identidades</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-hdd-stack me-2"></i>Almacenamiento</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-diagram-2 me-2"></i>Clusters</a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-box-seam me-2"></i>Contenedores y VMs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 pt-3 border-top">
+                                    <div class="col-md-12">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <h6 class="mega-menu-title mb-2">Recursos adicionales</h6>
+                                                <div class="d-flex gap-3">
+                                                    <a href="#" class="text-decoration-none text-white-50"><i class="bi bi-cloud me-1"></i>Cloud</a>
+                                                    <a href="#" class="text-decoration-none text-white-50"><i class="bi bi-code-slash me-1"></i>Desarrollo de aplicaciones</a>
+                                                    <a href="#" class="text-decoration-none text-white-50"><i class="bi bi-stars me-1"></i>RHEL Lightspeed</a>
+                                                    <a href="#" class="text-decoration-none text-white-50"><i class="bi bi-server me-1"></i>RHEL para SAP</a>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn btn-danger btn-sm">Ver toda la documentación</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <!-- Products Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-server me-2"></i>Red Hat Enterprise Linux</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-box me-2"></i>OpenShift</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cloud me-2"></i>Ansible Automation</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Ver todos los productos</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Solutions Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Soluciones
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Cloud computing</a></li>
+                            <li><a class="dropdown-item" href="#">Contenedores</a></li>
+                            <li><a class="dropdown-item" href="#">Automatización</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recursos">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-danger btn-sm" href="#">Prueba gratuita</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-
-	<div class="px-4 py-5 my-5 text-center bg-secondary no-margin"> <img class="d-block mx-auto mb-4"
-			src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" alt="" width="42" height="42">
-		<h1 class="display-5 fw-bold text-body-emphasis">Centered hero</h1>
-		<div class="col-lg-6 mx-auto">
-			<p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
-				popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
-				extensive prebuilt components, and powerful JavaScript plugins.</p>
-			<div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button"
-					class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>  </div>
-		</div>
-		<div class="container-fluid  mt-5 p-3">
-						<div class="row g-2">
-							<div class="col">
-								<div class="box text-center">
-									<div class="image">
-										<img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256"
-											width="42" loading="lazy">
-									</div>
-									<span>Awareness</span>
-								</div>
-							</div>
-							<div class="col">
-								<div class="box text-center">
-									<div class="image">
-										<img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" width="42" loading="lazy">
-									</div>
-									<span>Consulting</span>
-								</div>
-							</div>
-							<div class="col">
-								<div class="box text-center">
-									<div class="image">
-										<img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" width="42" loading="lazy">
-									</div>
-									<span>Cloud&amp;DevOps</span>
-								</div>
-							</div>
-							<div class="col">
-								<div class="box text-center">
-									<div class="image">
-										<img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" width="42" loading="lazy">
-									</div>
-									<span>CyberDefense</span>
-								</div>
-							</div>
-							<div class="col">
-								<div class="box text-center">
-									<div class="image">
-										<img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" width="42" loading="lazy">
-									</div>
-									<span>Data</span>
-								</div>
-							</div>
-							<div class="col">
-								<div class="box text-center">
-									<div class="image">
-										<img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" width="42" loading="lazy">
-									</div>
-									<span>Identity</span>
-								</div>
-							</div>
-							<div class="col">
-								<div class="box text-center">
-									<div class="image">
-										<img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" width="42" loading="lazy">
-									</div>
-									<span>Transformation</span>
-								</div>
-							</div>
-						</div>
-					</div>
-	</div>
-
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
-            </div>
-
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <img src="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080" class="w-100 img-fluid rounded mb-4" alt="Photo by Nathan Dumlao" srcset="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
-            </div>
-
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
-                <img src="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080" class="w-100 img-fluid rounded mb-4" alt="Photo by Filip Zrnzević" srcset="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold text-white mb-4">
+                        Red Hat Enterprise Linux 10
+                    </h1>
+                    <p class="lead text-white mb-4">
+                        La última versión de la plataforma Linux líder empresarial. Documentación completa, guías de instalación y recursos para administradores de sistemas.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#productos" class="btn btn-danger btn-lg">Ver documentación</a>
+                        <a href="#" class="btn btn-outline-light btn-lg">Descargar RHEL 10</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-					
-  <!-- Tabs Verticales Section -->
-              <main class="main-content">
-
-
-        <section id="tabs-section" class="content-section">
-            <h2>Sección con Tabs Verticales</h2>
-            <p>Explora diferentes contenidos usando las pestañas verticales a continuación.</p>
-            
-            <div class="vertical-tabs-container">
-                <!-- Tabs Navigation -->
-                <div class="tabs-nav">
-                    <button class="tab-button active" data-tab="tab1">
-                        <span class="tab-label">Misión</span>
-                    </button>
-                    <button class="tab-button" data-tab="tab2">
-                        <span class="tab-label">Visión</span>
-                    </button>
-                    <button class="tab-button" data-tab="tab3">
-                        <span class="tab-label">Valores</span>
-                    </button>
-                    <button class="tab-button" data-tab="tab4">
-                        <span class="tab-label">Objetivos</span>
-                    </button>
-                    <button class="tab-button" data-tab="tab6">
-                        <span class="tab-label">Resultados</span>
-                    </button>
-                     <button class="tab-button" data-tab="tab7">
-                        <span class="tab-label">Resultados</span>
-                    </button>
-                     <button class="tab-button" data-tab="tab8">
-                        <span class="tab-label">Resultados</span>
-                    </button>
-                     <button class="tab-button" data-tab="tab9">
-                        <span class="tab-label">Resultados</span>
-                    </button>
-                     <button class="tab-button" data-tab="tab10">
-                        <span class="tab-label">Resultados</span>
-                    </button>
-                     <button class="tab-button" data-tab="tab11">
-                        <span class="tab-label">Resultados</span>
-                    </button>
+    <!-- Quick Access Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Acceso rápido a la documentación</h2>
+                <p class="lead text-muted">Encuentra lo que necesitas rápidamente</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card quick-access-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-danger text-white mb-3 mx-auto">
+                                <i class="bi bi-download fs-2"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Instalación</h3>
+                            <p class="text-muted small mb-3">
+                                Guías paso a paso para instalar RHEL 10 en diferentes entornos
+                            </p>
+                            <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                Comenzar <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Tabs Content -->
-                <div class="tabs-content">
-                    <div class="tab-panel active" id="tab1">
-                        <h3>Nuestra Misión</h3>
-                        <div class="tab-img">
-                            <img class="img-fluid" src="https://images.unsplash.com/photo-1565021324587-5fd009870e68?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" srcset="https://images.unsplash.com/photo-1565021324587-5fd009870e68?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" alt="Photo by Félix Besombes" loading="lazy">
-                        </div>
-                        <div class="tab-card">
-                            <h4>Compromiso con la Excelencia</h4>
-                            <p>Nos dedicamos a superar las expectativas de nuestros clientes mediante:</p>
-                            <ul>
-                                <li>Innovación constante en nuestros productos y servicios</li>
-                                <li>Atención personalizada y soporte continuo</li>
-                                <li>Mejora continua de nuestros procesos</li>
-                                <li>Formación y desarrollo de nuestro equipo</li>
-                            </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card quick-access-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-danger text-white mb-3 mx-auto">
+                                <i class="bi bi-arrow-up-circle fs-2"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Actualización</h3>
+                            <p class="text-muted small mb-3">
+                                Migra desde RHEL 9 a RHEL 10 de forma segura
+                            </p>
+                            <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                Ver guía <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="tab-panel" id="tab2">
-                        <h3>Nuestra Visión</h3>
-                        <p>Ser líderes reconocidos en el sector tecnológico, impulsando la transformación digital de empresas en todo el mundo.</p>
-                        <div class="tab-card">
-                            <h4>Hacia el Futuro</h4>
-                            <p>Visualizamos un futuro donde:</p>
-                            <ul>
-                                <li>La tecnología sea accesible para todas las empresas</li>
-                                <li>La innovación impulse el crecimiento sostenible</li>
-                                <li>Las soluciones digitales mejoren la calidad de vida</li>
-                                <li>La colaboración global genere oportunidades</li>
-                            </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card quick-access-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-danger text-white mb-3 mx-auto">
+                                <i class="bi bi-gear-wide-connected fs-2"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Administración</h3>
+                            <p class="text-muted small mb-3">
+                                Gestiona y configura tu sistema RHEL 10
+                            </p>
+                            <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                Explorar <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="tab-panel" id="tab3">
-                        <h3>Nuestros Valores</h3>
-                        <p>Los principios fundamentales que guían todas nuestras acciones y decisiones.</p>
-                        <div class="tab-card">
-                            <h4>Integridad</h4>
-                            <p>Actuamos con honestidad y transparencia en todas nuestras relaciones.</p>
-                        </div>
-                        <div class="tab-card">
-                            <h4>Innovación</h4>
-                            <p>Buscamos constantemente nuevas formas de mejorar y crear valor.</p>
-                        </div>
-                        <div class="tab-card">
-                            <h4>Colaboración</h4>
-                            <p>Trabajamos en equipo para alcanzar objetivos comunes.</p>
-                        </div>
-                        <div class="tab-card">
-                            <h4>Excelencia</h4>
-                            <p>Nos esforzamos por la calidad en todo lo que hacemos.</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card quick-access-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box bg-danger text-white mb-3 mx-auto">
+                                <i class="bi bi-shield-check fs-2"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Seguridad</h3>
+                            <p class="text-muted small mb-3">
+                                Protege tu infraestructura con las mejores prácticas
+                            </p>
+                            <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                Aprender más <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="tab-panel" id="tab4">
-                        <h3>Objetivos Estratégicos</h3>
-                        <p>Metas claras que nos guían hacia el éxito sostenible.</p>
-                        <div class="tab-card">
-                            <h4>Corto Plazo (2024-2025)</h4>
-                            <ul>
-                                <li>Expandir nuestra base de clientes en un 30%</li>
-                                <li>Lanzar 3 nuevos productos innovadores</li>
-                                <li>Mejorar la satisfacción del cliente al 95%</li>
-                                <li>Fortalecer nuestro equipo con 20 nuevos talentos</li>
-                            </ul>
-                        </div>
-                        <div class="tab-card">
-                            <h4>Largo Plazo (2025-2027)</h4>
-                            <ul>
-                                <li>Establecer presencia en 5 nuevos mercados internacionales</li>
-                                <li>Alcanzar certificaciones de calidad ISO</li>
-                                <li>Desarrollar un ecosistema de partners estratégicos</li>
-                                <li>Implementar prácticas 100% sostenibles</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tab-panel" id="tab5">
-                        <h3>Resultados y Logros</h3>
-                        <p>Nuestros logros demuestran nuestro compromiso con la excelencia.</p>
-                        <div class="tab-card">
-                            <h4>Métricas de Éxito 2024</h4>
-                            <div class="metrics-grid">
-                                <div class="metric-item">
-                                    <div class="metric-value">500+</div>
-                                    <div class="metric-label">Clientes Satisfechos</div>
+    <!-- Documentation Categories -->
+    <section id="productos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Categorías de documentación</h2>
+                <p class="lead text-muted">Explora toda la documentación organizada por temas</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card doc-category-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-danger text-white me-3">
+                                    <i class="bi bi-terminal fs-3"></i>
                                 </div>
-                                <div class="metric-item">
-                                    <div class="metric-value">98%</div>
-                                    <div class="metric-label">Tasa de Retención</div>
+                                <div>
+                                    <h3 class="h4 fw-bold mb-3">Administración del sistema</h3>
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Automatización con system roles</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Gestión de software con DNF</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Consola web</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Monitoreo de rendimiento</li>
+                                    </ul>
+                                    <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                        Ver documentación completa <i class="bi bi-arrow-right"></i>
+                                    </a>
                                 </div>
-                                <div class="metric-item">
-                                    <div class="metric-value">50+</div>
-                                    <div class="metric-label">Proyectos Completados</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card doc-category-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-danger text-white me-3">
+                                    <i class="bi bi-shield-lock fs-3"></i>
                                 </div>
-                                <div class="metric-item">
-                                    <div class="metric-value">4.9/5</div>
-                                    <div class="metric-label">Valoración Promedio</div>
+                                <div>
+                                    <h3 class="h4 fw-bold mb-3">Seguridad</h3>
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Endurecimiento de seguridad</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Seguridad de red</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>SELinux</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Gestión de certificados</li>
+                                    </ul>
+                                    <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                        Ver documentación completa <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card doc-category-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-danger text-white me-3">
+                                    <i class="bi bi-hdd-network fs-3"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h4 fw-bold mb-3">Redes</h3>
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Configuración de red</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Firewall y routing</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>VPN</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Balanceo de carga</li>
+                                    </ul>
+                                    <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                        Ver documentación completa <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card doc-category-card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="icon-box bg-danger text-white me-3">
+                                    <i class="bi bi-box-seam fs-3"></i>
+                                </div>
+                                <div>
+                                    <h3 class="h4 fw-bold mb-3">Contenedores y virtualización</h3>
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Podman</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>KVM y QEMU</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Gestión de imágenes</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Orquestación</li>
+                                    </ul>
+                                    <a href="#" class="text-danger fw-semibold text-decoration-none">
+                                        Ver documentación completa <i class="bi bi-arrow-right"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        </main>
-	
+    <!-- Recursos Section -->
+    <section id="recursos" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Recursos y aprendizaje</h2>
+                <p class="lead text-muted">Todo lo que necesitas para dominar RHEL 10</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="resource-item text-center p-4">
+                        <div class="icon-circle bg-danger bg-opacity-10 text-danger mb-3 mx-auto">
+                            <i class="bi bi-book fs-1"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2">Documentación</h4>
+                        <p class="text-muted small">Guías técnicas completas y referencias de API</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="resource-item text-center p-4">
+                        <div class="icon-circle bg-danger bg-opacity-10 text-danger mb-3 mx-auto">
+                            <i class="bi bi-mortarboard fs-1"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2">Formación</h4>
+                        <p class="text-muted small">Cursos y certificaciones oficiales</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="resource-item text-center p-4">
+                        <div class="icon-circle bg-danger bg-opacity-10 text-danger mb-3 mx-auto">
+                            <i class="bi bi-people fs-1"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2">Comunidad</h4>
+                        <p class="text-muted small">Conecta con expertos y desarrolladores</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="resource-item text-center p-4">
+                        <div class="icon-circle bg-danger bg-opacity-10 text-danger mb-3 mx-auto">
+                            <i class="bi bi-headset fs-1"></i>
+                        </div>
+                        <h4 class="h5 fw-bold mb-2">Soporte</h4>
+                        <p class="text-muted small">Asistencia técnica 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-     
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="h1 fw-bold mb-3">¿Listo para comenzar con RHEL 10?</h2>
+                    <p class="lead mb-0">Descarga la última versión y explora todas las nuevas características y mejoras.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="#" class="btn btn-danger btn-lg">Descargar ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer bg-black text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Productos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Red Hat Enterprise Linux</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Red Hat OpenShift</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Ansible Automation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Red Hat OpenStack</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Soluciones</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Cloud computing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contenedores</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">DevOps</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Seguridad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Recursos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Documentación</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Formación</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Eventos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="fw-bold mb-3">Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Acerca de</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Carreras</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contacto</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-white opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 small mb-3 mb-md-0">
+                        © 2024 Red Hat, Inc. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white-50 me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white-50"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script type="module" src="resources/js/script.js"></script>
 </body>
+
+</html>

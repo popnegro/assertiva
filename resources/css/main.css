@@ -38,6 +38,15 @@
     margin-left: 20px;
 }
 
+.masthead {
+        background-image: url('/resources/images/awareness-header.webp'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents image repetition */
+        height: 80vh; /* Example: Sets height to 100% of viewport height */
+        /* Add other styling like padding, text color etc. */
+    }
+
 .menu-toggle {
     display: none;
     flex-direction: column;
