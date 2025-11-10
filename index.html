@@ -20,6 +20,7 @@
 <link rel="icon" href="https://freefrontend.com/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <link href="resources/css/main.css" rel="stylesheet">
+<script type="module" src="resources/js/script.js"></script>
 </head>
 
 <body>
@@ -63,7 +64,7 @@
             </div>
         </div>
     </nav>
-    
+
 
 	<div class="px-4 py-5 my-5 text-center bg-secondary no-margin"> <img class="d-block mx-auto mb-4"
 			src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" alt="" width="42" height="42">
@@ -137,100 +138,180 @@
 						</div>
 					</div>
 	</div>
-					
 
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080" class="w-100 img-fluid rounded mb-4" alt="Photo by Nathan Dumlao" srcset="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell" srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080" class="w-100 img-fluid rounded mb-4" alt="Photo by Filip Zrnzević" srcset="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+					
+  <!-- Tabs Verticales Section -->
+              <main class="main-content">
+
+
+        <section id="tabs-section" class="content-section">
+            <h2>Sección con Tabs Verticales</h2>
+            <p>Explora diferentes contenidos usando las pestañas verticales a continuación.</p>
+            
+            <div class="vertical-tabs-container">
+                <!-- Tabs Navigation -->
+                <div class="tabs-nav">
+                    <button class="tab-button active" data-tab="tab1">
+                        <span class="tab-label">Misión</span>
+                    </button>
+                    <button class="tab-button" data-tab="tab2">
+                        <span class="tab-label">Visión</span>
+                    </button>
+                    <button class="tab-button" data-tab="tab3">
+                        <span class="tab-label">Valores</span>
+                    </button>
+                    <button class="tab-button" data-tab="tab4">
+                        <span class="tab-label">Objetivos</span>
+                    </button>
+                    <button class="tab-button" data-tab="tab6">
+                        <span class="tab-label">Resultados</span>
+                    </button>
+                     <button class="tab-button" data-tab="tab7">
+                        <span class="tab-label">Resultados</span>
+                    </button>
+                     <button class="tab-button" data-tab="tab8">
+                        <span class="tab-label">Resultados</span>
+                    </button>
+                     <button class="tab-button" data-tab="tab9">
+                        <span class="tab-label">Resultados</span>
+                    </button>
+                     <button class="tab-button" data-tab="tab10">
+                        <span class="tab-label">Resultados</span>
+                    </button>
+                     <button class="tab-button" data-tab="tab11">
+                        <span class="tab-label">Resultados</span>
+                    </button>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="tabs-content">
+                    <div class="tab-panel active" id="tab1">
+                        <h3>Nuestra Misión</h3>
+                        <div class="tab-img">
+                            <img class="img-fluid" src="https://images.unsplash.com/photo-1565021324587-5fd009870e68?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768" srcset="https://images.unsplash.com/photo-1565021324587-5fd009870e68?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1565021324587-5fd009870e68??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8ODJ8fGJsdWV8ZW58MHwwfHx8MTYzNTAwMjc0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" alt="Photo by Félix Besombes" loading="lazy">
+                        </div>
+                        <div class="tab-card">
+                            <h4>Compromiso con la Excelencia</h4>
+                            <p>Nos dedicamos a superar las expectativas de nuestros clientes mediante:</p>
+                            <ul>
+                                <li>Innovación constante en nuestros productos y servicios</li>
+                                <li>Atención personalizada y soporte continuo</li>
+                                <li>Mejora continua de nuestros procesos</li>
+                                <li>Formación y desarrollo de nuestro equipo</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="tab2">
+                        <h3>Nuestra Visión</h3>
+                        <p>Ser líderes reconocidos en el sector tecnológico, impulsando la transformación digital de empresas en todo el mundo.</p>
+                        <div class="tab-card">
+                            <h4>Hacia el Futuro</h4>
+                            <p>Visualizamos un futuro donde:</p>
+                            <ul>
+                                <li>La tecnología sea accesible para todas las empresas</li>
+                                <li>La innovación impulse el crecimiento sostenible</li>
+                                <li>Las soluciones digitales mejoren la calidad de vida</li>
+                                <li>La colaboración global genere oportunidades</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="tab3">
+                        <h3>Nuestros Valores</h3>
+                        <p>Los principios fundamentales que guían todas nuestras acciones y decisiones.</p>
+                        <div class="tab-card">
+                            <h4>Integridad</h4>
+                            <p>Actuamos con honestidad y transparencia en todas nuestras relaciones.</p>
+                        </div>
+                        <div class="tab-card">
+                            <h4>Innovación</h4>
+                            <p>Buscamos constantemente nuevas formas de mejorar y crear valor.</p>
+                        </div>
+                        <div class="tab-card">
+                            <h4>Colaboración</h4>
+                            <p>Trabajamos en equipo para alcanzar objetivos comunes.</p>
+                        </div>
+                        <div class="tab-card">
+                            <h4>Excelencia</h4>
+                            <p>Nos esforzamos por la calidad en todo lo que hacemos.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="tab4">
+                        <h3>Objetivos Estratégicos</h3>
+                        <p>Metas claras que nos guían hacia el éxito sostenible.</p>
+                        <div class="tab-card">
+                            <h4>Corto Plazo (2024-2025)</h4>
+                            <ul>
+                                <li>Expandir nuestra base de clientes en un 30%</li>
+                                <li>Lanzar 3 nuevos productos innovadores</li>
+                                <li>Mejorar la satisfacción del cliente al 95%</li>
+                                <li>Fortalecer nuestro equipo con 20 nuevos talentos</li>
+                            </ul>
+                        </div>
+                        <div class="tab-card">
+                            <h4>Largo Plazo (2025-2027)</h4>
+                            <ul>
+                                <li>Establecer presencia en 5 nuevos mercados internacionales</li>
+                                <li>Alcanzar certificaciones de calidad ISO</li>
+                                <li>Desarrollar un ecosistema de partners estratégicos</li>
+                                <li>Implementar prácticas 100% sostenibles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="tab5">
+                        <h3>Resultados y Logros</h3>
+                        <p>Nuestros logros demuestran nuestro compromiso con la excelencia.</p>
+                        <div class="tab-card">
+                            <h4>Métricas de Éxito 2024</h4>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <div class="metric-value">500+</div>
+                                    <div class="metric-label">Clientes Satisfechos</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">98%</div>
+                                    <div class="metric-label">Tasa de Retención</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">50+</div>
+                                    <div class="metric-label">Proyectos Completados</div>
+                                </div>
+                                <div class="metric-item">
+                                    <div class="metric-value">4.9/5</div>
+                                    <div class="metric-label">Valoración Promedio</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
 	
 
-        <!-- Envoltura del Masonry -->
-        <div class="masonry-wrapper">
-
-            <!-- Inicio de las tarjetas -->
-            
-            <!-- Item 1 (Alto) -->
-            <div class="masonry-item bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256" 
-                     alt="Imagen de relleno alta" 
-                     class="w-full h-auto object-cover"
-                     onerror="this.src='https://assertiva-test17-24982445.dev.odoo.com/web/image/18063-ad60b007/awareness-ic.png?height=256https://placehold.co/600x800'">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Título de la Tarjeta</h3>
-                    <p class="text-gray-600">
-                        Esta es una tarjeta con una imagen alta. El layout se ajusta automáticamente.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 2 (Mediano) -->
-            <div class="masonry-item bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x400/10B981/white?text=Imagen+Mediana" 
-                     alt="Imagen de relleno mediana" 
-                     class="w-full h-auto object-cover"
-                     onerror="this.src='https://placehold.co/600x400'">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Otra Tarjeta</h3>
-                    <p class="text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 3 (Cuadrado) -->
-            <div class="masonry-item bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x600/F59E0B/white?text=Imagen+Cuadrada" 
-                     alt="Imagen de relleno cuadrada" 
-                     class="w-full h-auto object-cover"
-                     onerror="this.src='https://placehold.co/600x600'">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Tarjeta Cuadrada</h3>
-                    <p class="text-gray-600">
-                        El contenido fluye hacia la siguiente columna disponible.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Item 4 (Mediano) -->
-            <div class="masonry-item bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x450/EF4444/white?text=Imagen+4:3" 
-                     alt="Imagen de relleno 4:3" 
-                     class="w-full h-auto object-cover"
-                     onerror="this.src='https://placehold.co/600x450'">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Hover sobre mí</h3>
-                    <p class="text-gray-600">
-                        Nota cómo la tarjeta se escala suavemente y la sombra aumenta.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Item 5 (Alto) -->
-            <div class="masonry-item bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x700/8B5CF6/white?text=Imagen+Alta+2" 
-                     alt="Imagen de relleno alta" 
-                     class="w-full h-auto object-cover"
-                     onerror="this.src='https://placehold.co/600x700'">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Relleno de Columna</h3>
-                    <p class="text-gray-600">
-                        Perfecto para galerías de imágenes o portfolios.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Item 6 (Bajo) -->
-            <div class="masonry-item bg-white rounded-lg shadow-md overflow-hidden">
-                <img src="https://placehold.co/600x300/EC4899/white?text=Imagen+Ancha" 
-                     alt="Imagen de relleno ancha" 
-                     class="w-full h-auto object-cover"
-                     onerror="this.src='https://placehold.co/600x300'">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Tarjeta más corta</h3>
-                    <p class="text-gray-600">
-                        Incluso las tarjetas más cortas encuentran su lugar sin dejar huecos verticales.
-                    </p>
-                </div>
-            </div>
-
-        </div> <!-- Fin de .masonry-wrapper -->
-
-    </div>
+     
 </body>
