@@ -264,6 +264,480 @@
             line-height: 1.7;
         }
 
+        /* --- Estilos para Menús Desplegables (Dropdowns) --- */
+        .dropdown-menu {
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 0.5rem;
+            padding: 0.75rem 0;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-item {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #f8f9fa;
+            color: var(--rh-red);
+        }
+
+        .dropdown-item.active,
+        .dropdown-item:active {
+            background-color: var(--rh-red);
+            color: #fff;
+        }
+
+        /* Dropdown con contenido rico */
+        .dropdown-menu-rich {
+            min-width: 300px;
+            padding: 1.5rem;
+        }
+
+        .dropdown-header {
+            font-weight: 700;
+            color: var(--rh-dark);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 1.25rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-item-text {
+            padding: 0.5rem 1.25rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Dropdown dividido */
+        .dropdown-divider {
+            margin: 0.5rem 0;
+            border-top: 1px solid #eee;
+        }
+
+        /* Sección de dropdowns de ejemplo */
+        .dropdowns-demo-section {
+            background-color: #fafafa;
+        }
+
+        .dropdown-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .dropdown-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        /* --- Estilos para Grid Masonry con Cards de Imagen de Fondo --- */
+        .masonry-bg-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .masonry-bg-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .masonry-bg-grid {
+                column-count: 3;
+            }
+        }
+
+        .masonry-bg-grid .bg-card-wrapper {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            break-inside: avoid-column;
+        }
+
+        .bg-card {
+            position: relative;
+            width: 100%;
+            min-height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Efecto hover: zoom y cambio de imagen */
+        .bg-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+            transform: scale(1.1);
+        }
+
+        .bg-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+        }
+
+        .bg-card:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Overlay oscuro para mejor legibilidad del texto */
+        .bg-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 2;
+            transition: background 0.4s ease;
+        }
+
+        .bg-card:hover .bg-card-overlay-awareness {
+            background: linear-gradient(to bottom, rgba(16, 0, 238, 0.6) 100%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        /* Contenido de la card */
+        .bg-card-content {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            color: #fff;
+        }
+
+        .bg-card-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-top: 0.75rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .bg-card:hover .bg-card-title {
+            transform: translateY(-5px);
+        }
+
+        .bg-card-text {
+            font-size: 1rem;
+            margin-top: 1rem;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+            opacity: 0.95;
+        }
+
+        .bg-card-btn {
+            align-self: flex-start;
+            background-color: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .bg-card-btn:hover {
+            background-color: var(--rh-red);
+            border-color: var(--rh-red);
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        /* Alturas variables para efecto masonry */
+        .bg-card.tall {
+            min-height: 400px;
+        }
+
+        .bg-card.medium {
+            min-height: 350px;
+        }
+
+        .bg-card.short {
+            min-height: 260px;
+        }
+
+        /* --- Estilos para Menú Aside con Contenido Extenso --- */
+        .aside-menu-container {
+            display: flex;
+            min-height: 600px;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        /* Menú Aside - Desktop: Vertical */
+        .aside-menu {
+            width: 280px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #e0e0e0;
+            padding: 1.5rem 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .aside-menu .nav {
+            flex-direction: column;
+        }
+
+        .aside-menu .nav-link {
+            padding: 0.875rem 1.5rem;
+            color: #333;
+            font-weight: 500;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .aside-menu .nav-link:hover {
+            background-color: #f0f0f0;
+            color: var(--rh-red);
+            border-left-color: var(--rh-red);
+        }
+
+        .aside-menu .nav-link.active {
+            background-color: #fff;
+            color: var(--rh-red);
+            border-left-color: var(--rh-red);
+            font-weight: 700;
+        }
+
+        /* Menú Aside - Mobile: Horizontal Scroll con Touch */
+        @media (max-width: 991.98px) {
+            .aside-menu-container {
+                flex-direction: column;
+            }
+
+            .aside-menu {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 1rem 0;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch; /* Momentum scrolling en iOS */
+                scrollbar-width: thin;
+                scroll-behavior: smooth;
+                /* Scroll snap para alineación automática */
+                scroll-snap-type: x mandatory;
+                /* Mejorar el comportamiento táctil */
+                touch-action: pan-x;
+                overscroll-behavior-x: contain;
+                position: relative; /* Para el indicador de scroll */
+            }
+
+            .aside-menu .nav {
+                flex-direction: row;
+                white-space: nowrap;
+                padding: 0 1rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .aside-menu .nav-link {
+                padding: 0.75rem 1.25rem;
+                border-left: none;
+                border-bottom: 3px solid transparent;
+                white-space: nowrap;
+                display: inline-block;
+                flex-shrink: 0;
+                /* Scroll snap para cada elemento */
+                scroll-snap-align: center;
+                scroll-snap-stop: always;
+                /* Mejorar la interacción táctil */
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+                user-select: none;
+                /* Transición suave para el cambio de estado activo durante scroll */
+                transition: border-bottom-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+            }
+
+            .aside-menu .nav-link:hover,
+            .aside-menu .nav-link.active {
+                border-left: none;
+                border-bottom-color: var(--rh-red);
+            }
+
+            /* Indicador visual de que se puede hacer scroll */
+            .aside-menu::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 20px;
+                background: linear-gradient(to left, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0));
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .aside-menu.scrollable::after {
+                opacity: 1;
+            }
+        }
+
+        /* Área de Contenido */
+        .aside-content {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+
+        .aside-content-section {
+            display: none;
+            animation: fadeIn 0.4s ease-in;
+        }
+
+        .aside-content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .aside-content-section h2 {
+            font-weight: 700;
+            color: var(--rh-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--rh-red);
+        }
+
+        .aside-content-section h3 {
+            font-weight: 600;
+            color: var(--rh-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .aside-content-section p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .aside-content-section ul,
+        .aside-content-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .aside-content-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .aside-content-section .card {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Estilos para imágenes en el contenido */
+        .aside-content-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .aside-content-section .content-image {
+            margin: 2rem 0;
+        }
+
+        .aside-content-section .content-image-left {
+            float: left;
+            width: 45%;
+            margin: 1rem 2rem 1rem 0;
+        }
+
+        .aside-content-section .content-image-right {
+            float: right;
+            width: 45%;
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .aside-content-section .content-image-center {
+            display: block;
+            margin: 2rem auto;
+            max-width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .aside-content-section .content-image-left,
+            .aside-content-section .content-image-right {
+                float: none;
+                width: 100%;
+                margin: 1.5rem 0;
+            }
+        }
+
+        .aside-content-section .image-caption {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+            margin-top: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Indicador de scroll horizontal en mobile */
+        .aside-menu::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .aside-menu::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .aside-menu::-webkit-scrollbar-thumb {
+            background: var(--rh-red);
+            border-radius: 3px;
+        }
+
+        .aside-menu::-webkit-scrollbar-thumb:hover {
+            background: #c00;
+        }
+
     </style>
 </head>
 <body>
@@ -752,7 +1226,730 @@
         </div>
     </div>
 
-    <!-- 7. Footer -->
+    <!-- 7. Sección de Menús Desplegables con Contenido -->
+    <div class="container-fluid dropdowns-demo-section py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Menús Desplegables con Contenido</h2>
+            
+            <div class="row g-4">
+                <!-- Ejemplo 1: Dropdown Simple -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dropdown-card">
+                        <h4 class="fw-bold mb-3">Dropdown Simple</h4>
+                        <p class="text-secondary mb-4">Menú desplegable básico con opciones de navegación.</p>
+                        <div class="btn-group w-100">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Seleccionar Opción
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><h6 class="dropdown-header">Categorías</h6></li>
+                                <li><a class="dropdown-item" href="#">Productos</a></li>
+                                <li><a class="dropdown-item" href="#">Servicios</a></li>
+                                <li><a class="dropdown-item" href="#">Soluciones</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Soporte</a></li>
+                                <li><a class="dropdown-item" href="#">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 2: Dropdown con Contenido Rico -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dropdown-card">
+                        <h4 class="fw-bold mb-3">Dropdown con Contenido Rico</h4>
+                        <p class="text-secondary mb-4">Menú desplegable con descripciones y contenido adicional.</p>
+                        <div class="btn-group w-100">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios Disponibles
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-rich">
+                                <li><h6 class="dropdown-header">Servicios de Seguridad</h6></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="fw-bold">Consultoría en Ciberseguridad</div>
+                                        <small class="text-muted d-block">Análisis y evaluación de riesgos</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="fw-bold">Auditoría de Seguridad</div>
+                                        <small class="text-muted d-block">Revisión completa de infraestructura</small>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Servicios de Cloud</h6></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="fw-bold">Migración a la Nube</div>
+                                        <small class="text-muted d-block">Planificación y ejecución</small>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 3: Dropdown con Formulario -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dropdown-card">
+                        <h4 class="fw-bold mb-3">Dropdown con Formulario</h4>
+                        <p class="text-secondary mb-4">Menú desplegable que incluye un formulario interactivo.</p>
+                        <div class="btn-group w-100">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Iniciar Sesión
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-rich">
+                                <li>
+                                    <form class="px-3 py-2">
+                                        <div class="mb-3">
+                                            <label for="dropdownEmail" class="form-label small">Email</label>
+                                            <input type="email" class="form-control form-control-sm" id="dropdownEmail" placeholder="tu@email.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="dropdownPassword" class="form-label small">Contraseña</label>
+                                            <input type="password" class="form-control form-control-sm" id="dropdownPassword" placeholder="••••••••">
+                                        </div>
+                                        <div class="mb-2">
+                                            <button type="submit" class="btn btn-primary btn-sm w-100">Entrar</button>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="#" class="small text-primary">¿Olvidaste tu contraseña?</a>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 4: Dropdown con Iconos -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dropdown-card">
+                        <h4 class="fw-bold mb-3">Dropdown con Iconos</h4>
+                        <p class="text-secondary mb-4">Menú desplegable con iconos para mejor visualización.</p>
+                        <div class="btn-group w-100">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Acciones Rápidas
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><h6 class="dropdown-header">Opciones</h6></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download me-2" viewBox="0 0 16 16">
+                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5h2.5a.5.5 0 0 1 0 1H3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1h-.5a.5.5 0 0 1 0-1H13a.5.5 0 0 1 .5.5v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1a.5.5 0 0 1 .5-.5z"/>
+                                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                                        </svg>
+                                        Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share me-2" viewBox="0 0 16 16">
+                                            <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                                        </svg>
+                                        Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil me-2" viewBox="0 0 16 16">
+                                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                        </svg>
+                                        Editar
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash me-2" viewBox="0 0 16 16">
+                                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                        </svg>
+                                        Eliminar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 5: Dropdown con Texto Informativo -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dropdown-card">
+                        <h4 class="fw-bold mb-3">Dropdown Informativo</h4>
+                        <p class="text-secondary mb-4">Menú desplegable con texto informativo y enlaces.</p>
+                        <div class="btn-group w-100">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Más Información
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-rich">
+                                <li>
+                                    <div class="px-3 py-2">
+                                        <h6 class="fw-bold mb-2">Sobre Nuestros Servicios</h6>
+                                        <p class="dropdown-item-text mb-2">Ofrecemos soluciones integrales de ciberseguridad para proteger tu negocio.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-primary w-100">Ver más detalles</a>
+                                    </div>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Documentación</a></li>
+                                <li><a class="dropdown-item" href="#">Casos de éxito</a></li>
+                                <li><a class="dropdown-item" href="#">Contactar ventas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ejemplo 6: Dropdown con Badges -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dropdown-card">
+                        <h4 class="fw-bold mb-3">Dropdown con Badges</h4>
+                        <p class="text-secondary mb-4">Menú desplegable con badges para mostrar estados o contadores.</p>
+                        <div class="btn-group w-100">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Notificaciones
+                                <span class="badge bg-danger ms-2">3</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><h6 class="dropdown-header">Notificaciones Recientes</h6></li>
+                                <li>
+                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                        <span>Nuevo mensaje recibido</span>
+                                        <span class="badge bg-primary rounded-pill">Nuevo</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                        <span>Tarea completada</span>
+                                        <span class="badge bg-success rounded-pill">2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                        <span>Actualización disponible</span>
+                                        <span class="badge bg-warning rounded-pill">!</span>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-center" href="#">Ver todas las notificaciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplo adicional: Dropdown en la barra de navegación -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="dropdown-card">
+                        <h4 class="fw-bold mb-3">Dropdown en Barra de Navegación</h4>
+                        <p class="text-secondary mb-4">Ejemplo de cómo integrar dropdowns en una barra de navegación.</p>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded p-3">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Menú Principal</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdownDemo">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarDropdownDemo">
+                                    <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Productos
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                                <li><a class="dropdown-item" href="#">Sistemas Operativos</a></li>
+                                                <li><a class="dropdown-item" href="#">Plataformas Cloud</a></li>
+                                                <li><a class="dropdown-item" href="#">Herramientas de Desarrollo</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">Ver todos los productos</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Servicios
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-rich" aria-labelledby="navbarDropdown2">
+                                                <li>
+                                                    <h6 class="dropdown-header">Consultoría</h6>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <div class="fw-bold">Estrategia de Seguridad</div>
+                                                        <small class="text-muted d-block">Planificación y diseño</small>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">
+                                                        <div class="fw-bold">Implementación</div>
+                                                        <small class="text-muted d-block">Despliegue y configuración</small>
+                                                    </a>
+                                                </li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li>
+                                                    <h6 class="dropdown-header">Soporte</h6>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Soporte Técnico</a></li>
+                                                <li><a class="dropdown-item" href="#">Capacitación</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Contacto</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Menú Aside con Contenido Extenso -->
+    <div class="container py-5 my-5">
+        <h2 class="text-center fw-bold mb-5">Navegación con Contenido Dinámico</h2>
+        <p class="text-center text-secondary mb-4">Selecciona una opción del menú para ver el contenido detallado</p>
+        
+        <div class="aside-menu-container">
+            <!-- Menú Aside -->
+            <aside class="aside-menu">
+                <nav class="nav">
+                    <a class="nav-link active" href="#" data-content-id="intro">Introducción</a>
+                    <a class="nav-link" href="#" data-content-id="awareness">Awareness</a>
+                    <a class="nav-link" href="#" data-content-id="consulting">Consulting</a>
+                    <a class="nav-link" href="#" data-content-id="cloud">Cloud & DevOps</a>
+                    <a class="nav-link" href="#" data-content-id="cyberdefense">CyberDefense</a>
+                    <a class="nav-link" href="#" data-content-id="data">Data</a>
+                    <a class="nav-link" href="#" data-content-id="identity">Identity</a>
+                    <a class="nav-link" href="#" data-content-id="transformation">Transformation</a>
+                    <a class="nav-link" href="#" data-content-id="compliance">Compliance</a>
+                    <a class="nav-link" href="#" data-content-id="security">Seguridad Avanzada</a>
+                </nav>
+            </aside>
+
+            <!-- Área de Contenido -->
+            <div class="aside-content">
+                <!-- Sección: Introducción -->
+                <div id="intro" class="aside-content-section active">
+                    <h2>Bienvenido a Assertiva Risk Advisory</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80" alt="Ciberseguridad empresarial" class="content-image-center">
+                    <p class="image-caption">Soluciones integrales de ciberseguridad para proteger tu negocio</p>
+                    
+                    <p>Somos una empresa líder en soluciones de ciberseguridad e innovación tecnológica, dedicada a proteger y transformar el negocio de nuestros clientes mediante servicios especializados y tecnologías de vanguardia.</p>
+                    
+                    <h3>Nuestra Misión</h3>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Misión empresarial" class="content-image-left">
+                    <p>Proporcionar soluciones integrales de seguridad que permitan a las organizaciones operar con confianza en un entorno digital cada vez más complejo y desafiante. Nuestro compromiso es estar a la vanguardia de las amenazas emergentes, proporcionando protección proactiva y estrategias de defensa adaptativas.</p>
+
+                    <h3>Nuestros Valores</h3>
+                    <ul>
+                        <li><strong>Excelencia:</strong> Comprometidos con la más alta calidad en todos nuestros servicios</li>
+                        <li><strong>Innovación:</strong> Utilizamos tecnologías de última generación para resolver problemas complejos</li>
+                        <li><strong>Integridad:</strong> Actuamos con transparencia y ética en todas nuestras relaciones</li>
+                        <li><strong>Colaboración:</strong> Trabajamos en estrecha colaboración con nuestros clientes</li>
+                    </ul>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">¿Por qué elegirnos?</h5>
+                            <p class="card-text">Con más de una década de experiencia, hemos ayudado a cientos de organizaciones a fortalecer su postura de seguridad y acelerar su transformación digital.</p>
+                            <a href="#" class="btn btn-primary">Contactar con nosotros</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Awareness -->
+                <div id="awareness" class="aside-content-section">
+                    <h2>Awareness y Concientización en Seguridad</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80" alt="Capacitación en seguridad" class="content-image-center">
+                    <p class="image-caption">Programas de concientización diseñados para fortalecer la primera línea de defensa</p>
+                    
+                    <p>El factor humano sigue siendo uno de los puntos más vulnerables en la seguridad de la información. Nuestros programas de awareness están diseñados para transformar a tus empleados en la primera línea de defensa.</p>
+
+                    <h3>Servicios Incluidos</h3>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Servicios de awareness" class="content-image-right">
+                    <ul>
+                        <li><strong>Capacitación Personalizada:</strong> Programas adaptados a las necesidades específicas de tu organización</li>
+                        <li><strong>Simulaciones de Phishing:</strong> Ejercicios realistas para evaluar y mejorar la respuesta ante amenazas</li>
+                        <li><strong>Gamificación:</strong> Aprendizaje interactivo mediante juegos y competencias</li>
+                        <li><strong>Métricas y Reportes:</strong> Seguimiento continuo del progreso y efectividad del programa</li>
+                    </ul>
+
+                    <h3>Metodología</h3>
+                    <p>Utilizamos un enfoque basado en las mejores prácticas internacionales, combinando teoría y práctica para maximizar la retención del conocimiento y el cambio de comportamiento.</p>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Resultados Esperados</h5>
+                            <ul>
+                                <li>Reducción del 70% en incidentes relacionados con el factor humano</li>
+                                <li>Mejora significativa en la identificación de amenazas</li>
+                                <li>Cultura de seguridad fortalecida en toda la organización</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Consulting -->
+                <div id="consulting" class="aside-content-section">
+                    <h2>Consultoría en Ciberseguridad</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Consultoría estratégica" class="content-image-center">
+                    <p class="image-caption">Estrategias personalizadas para fortalecer tu postura de seguridad</p>
+                    
+                    <p>Nuestros servicios de consultoría estratégica te ayudan a diseñar, implementar y optimizar programas de seguridad que se alinean con tus objetivos de negocio.</p>
+
+                    <h3>Áreas de Especialización</h3>
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Especialización en seguridad" class="content-image-left">
+                    <ul>
+                        <li><strong>Estrategia de Seguridad:</strong> Desarrollo de roadmaps y marcos de trabajo</li>
+                        <li><strong>Arquitectura de Seguridad:</strong> Diseño de soluciones escalables y resilientes</li>
+                        <li><strong>Gestión de Riesgos:</strong> Identificación, evaluación y mitigación de riesgos</li>
+                        <li><strong>Compliance y Auditoría:</strong> Cumplimiento normativo y evaluaciones de seguridad</li>
+                    </ul>
+
+                    <h3>Proceso de Consultoría</h3>
+                    <ol>
+                        <li><strong>Análisis Inicial:</strong> Evaluación completa del estado actual</li>
+                        <li><strong>Diseño de Solución:</strong> Propuesta personalizada basada en mejores prácticas</li>
+                        <li><strong>Implementación:</strong> Ejecución con acompañamiento continuo</li>
+                        <li><strong>Optimización:</strong> Mejora continua basada en métricas y feedback</li>
+                    </ol>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Casos de Éxito</h5>
+                            <p class="card-text">Hemos ayudado a más de 200 organizaciones a mejorar su postura de seguridad, incluyendo empresas Fortune 500 y organizaciones gubernamentales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Cloud & DevOps -->
+                <div id="cloud" class="aside-content-section">
+                    <h2>Cloud & DevOps</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80" alt="Cloud computing" class="content-image-center">
+                    <p class="image-caption">Modernización de infraestructura con seguridad integrada</p>
+                    
+                    <p>Moderniza tu infraestructura con nuestras soluciones de nube y DevOps, diseñadas para acelerar la entrega de valor mientras mantienes los más altos estándares de seguridad.</p>
+
+                    <h3>Servicios Cloud</h3>
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="Servicios cloud" class="content-image-right">
+                    <ul>
+                        <li><strong>Migración a la Nube:</strong> Estrategias y ejecución de migraciones seguras</li>
+                        <li><strong>Arquitectura Multi-Cloud:</strong> Diseño de soluciones híbridas y multi-nube</li>
+                        <li><strong>Optimización de Costos:</strong> Análisis y optimización de gastos en la nube</li>
+                        <li><strong>Seguridad en la Nube:</strong> Implementación de controles y mejores prácticas</li>
+                    </ul>
+
+                    <h3>DevOps y Automatización</h3>
+                    <ul>
+                        <li><strong>CI/CD Pipelines:</strong> Implementación de pipelines de integración y despliegue continuo</li>
+                        <li><strong>Infraestructura como Código:</strong> Automatización mediante Terraform, Ansible y similares</li>
+                        <li><strong>Containerización:</strong> Docker, Kubernetes y orquestación de contenedores</li>
+                        <li><strong>Monitoreo y Observabilidad:</strong> Implementación de soluciones de monitoreo avanzado</li>
+                    </ul>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Tecnologías que Dominamos</h5>
+                            <p class="card-text">AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible, Jenkins, GitLab CI/CD, Prometheus, Grafana y más.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: CyberDefense -->
+                <div id="cyberdefense" class="aside-content-section">
+                    <h2>CyberDefense</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80" alt="Ciberdefensa" class="content-image-center">
+                    <p class="image-caption">Protección proactiva contra amenazas cibernéticas</p>
+                    
+                    <p>Protección proactiva contra amenazas cibernéticas mediante tecnologías de detección, prevención y respuesta avanzadas.</p>
+
+                    <h3>Servicios de Defensa</h3>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Servicios de defensa" class="content-image-left">
+                    <ul>
+                        <li><strong>SIEM y Monitoreo:</strong> Detección de amenazas en tiempo real</li>
+                        <li><strong>Endpoint Protection:</strong> Protección avanzada de endpoints</li>
+                        <li><strong>Network Security:</strong> Firewalls, IDS/IPS y segmentación de red</li>
+                        <li><strong>Threat Intelligence:</strong> Análisis de amenazas y inteligencia contextual</li>
+                    </ul>
+
+                    <h3>Respuesta a Incidentes</h3>
+                    <p>Nuestro equipo de respuesta a incidentes está disponible 24/7 para ayudarte a contener y remediar cualquier brecha de seguridad de manera rápida y efectiva.</p>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Tiempo de Respuesta</h5>
+                            <p class="card-text">Tiempo promedio de detección: menos de 5 minutos. Tiempo promedio de contención: menos de 30 minutos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Data -->
+                <div id="data" class="aside-content-section">
+                    <h2>Gestión y Protección de Datos</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Gestión de datos" class="content-image-center">
+                    <p class="image-caption">Protección y gobernanza integral de datos empresariales</p>
+                    
+                    <p>Protege y maximiza el valor de tus datos mediante estrategias integrales de gobernanza, seguridad y análisis.</p>
+
+                    <h3>Servicios de Datos</h3>
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="Servicios de datos" class="content-image-right">
+                    <ul>
+                        <li><strong>Gobernanza de Datos:</strong> Políticas, procedimientos y controles para la gestión de datos</li>
+                        <li><strong>Protección de Datos:</strong> Encriptación, enmascaramiento y control de acceso</li>
+                        <li><strong>Análisis de Datos:</strong> Big Data, Data Science y Business Intelligence</li>
+                        <li><strong>Cumplimiento:</strong> GDPR, CCPA y otras regulaciones de privacidad</li>
+                    </ul>
+
+                    <h3>Casos de Uso</h3>
+                    <ul>
+                        <li>Clasificación y etiquetado automático de datos sensibles</li>
+                        <li>Detección de accesos anómalos a datos críticos</li>
+                        <li>Análisis predictivo para prevención de fugas</li>
+                        <li>Reportes de cumplimiento automatizados</li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Identity -->
+                <div id="identity" class="aside-content-section">
+                    <h2>Gestión de Identidades y Accesos (IAM)</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80" alt="Gestión de identidades" class="content-image-center">
+                    <p class="image-caption">Control de accesos seguro y eficiente</p>
+                    
+                    <p>Soluciones robustas de gestión de identidades que garantizan que las personas adecuadas tengan acceso a los recursos correctos en el momento oportuno.</p>
+
+                    <h3>Servicios IAM</h3>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Servicios IAM" class="content-image-left">
+                    <ul>
+                        <li><strong>Single Sign-On (SSO):</strong> Autenticación unificada para todas las aplicaciones</li>
+                        <li><strong>Multi-Factor Authentication (MFA):</strong> Autenticación de múltiples factores</li>
+                        <li><strong>Provisioning Automático:</strong> Gestión del ciclo de vida de usuarios</li>
+                        <li><strong>Access Governance:</strong> Revisión y certificación de accesos</li>
+                    </ul>
+
+                    <h3>Beneficios</h3>
+                    <ul>
+                        <li>Reducción del 60% en tiempo de gestión de accesos</li>
+                        <li>Mejora en la experiencia del usuario</li>
+                        <li>Cumplimiento automatizado de políticas de acceso</li>
+                        <li>Visibilidad completa de quién tiene acceso a qué</li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Transformation -->
+                <div id="transformation" class="aside-content-section">
+                    <h2>Transformación Digital</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Transformación digital" class="content-image-center">
+                    <p class="image-caption">Innovación con seguridad integrada desde el inicio</p>
+                    
+                    <p>Acompañamos a las organizaciones en su viaje de transformación digital, asegurando que la seguridad esté integrada desde el inicio.</p>
+
+                    <h3>Servicios de Transformación</h3>
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="Servicios de transformación" class="content-image-right">
+                    <ul>
+                        <li><strong>Estrategia Digital:</strong> Roadmaps y planificación estratégica</li>
+                        <li><strong>Modernización de Aplicaciones:</strong> Refactorización y migración a arquitecturas modernas</li>
+                        <li><strong>Automatización de Procesos:</strong> RPA y automatización inteligente</li>
+                        <li><strong>Innovación Tecnológica:</strong> Adopción de tecnologías emergentes</li>
+                    </ul>
+
+                    <h3>Enfoque</h3>
+                    <p>Nuestro enfoque de "Security by Design" asegura que la seguridad no sea una barrera para la innovación, sino un habilitador que permite avanzar con confianza.</p>
+                </div>
+
+                <!-- Sección: Compliance -->
+                <div id="compliance" class="aside-content-section">
+                    <h2>Compliance y Auditoría</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" alt="Compliance y auditoría" class="content-image-center">
+                    <p class="image-caption">Cumplimiento normativo y estándares internacionales</p>
+                    
+                    <p>Garantiza el cumplimiento de regulaciones y estándares mediante evaluaciones, auditorías y programas de remediación.</p>
+
+                    <h3>Estándares y Regulaciones</h3>
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="Estándares" class="content-image-left">
+                    <ul>
+                        <li><strong>ISO 27001:</strong> Certificación y mantenimiento del SGSI</li>
+                        <li><strong>GDPR:</strong> Cumplimiento de protección de datos personales</li>
+                        <li><strong>PCI DSS:</strong> Seguridad de datos de tarjetas de pago</li>
+                        <li><strong>NIST Framework:</strong> Implementación del framework de ciberseguridad</li>
+                        <li><strong>SOX:</strong> Cumplimiento de controles financieros</li>
+                    </ul>
+
+                    <h3>Servicios de Auditoría</h3>
+                    <ul>
+                        <li>Auditorías de seguridad internas y externas</li>
+                        <li>Evaluaciones de cumplimiento</li>
+                        <li>Gap analysis y planes de remediación</li>
+                        <li>Preparación para certificaciones</li>
+                    </ul>
+                </div>
+
+                <!-- Sección: Seguridad Avanzada -->
+                <div id="security" class="aside-content-section">
+                    <h2>Seguridad Avanzada</h2>
+                    
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80" alt="Seguridad avanzada" class="content-image-center">
+                    <p class="image-caption">Tecnologías de próxima generación para protección inteligente</p>
+                    
+                    <p>Soluciones de seguridad de próxima generación que combinan inteligencia artificial, análisis de comportamiento y automatización.</p>
+
+                    <h3>Tecnologías Avanzadas</h3>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Tecnologías avanzadas" class="content-image-right">
+                    <ul>
+                        <li><strong>Machine Learning:</strong> Detección de anomalías mediante ML</li>
+                        <li><strong>Behavioral Analytics:</strong> Análisis de comportamiento de usuarios y entidades</li>
+                        <li><strong>Zero Trust:</strong> Implementación de arquitecturas Zero Trust</li>
+                        <li><strong>Threat Hunting:</strong> Búsqueda proactiva de amenazas</li>
+                    </ul>
+
+                    <h3>Ventajas Competitivas</h3>
+                    <ul>
+                        <li>Detección de amenazas avanzadas y APTs</li>
+                        <li>Respuesta automatizada a incidentes</li>
+                        <li>Reducción de falsos positivos</li>
+                        <li>Visibilidad completa del ecosistema de seguridad</li>
+                    </ul>
+
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Centro de Operaciones de Seguridad (SOC)</h5>
+                            <p class="card-text">Nuestro SOC 24/7 monitorea, detecta y responde a amenazas en tiempo real, utilizando las últimas tecnologías y un equipo de expertos altamente capacitado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Grid Masonry con Cards de Imagen de Fondo -->
+    <div class="container-fluid section-bg-light py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Nuestros Servicios</h2>
+            <p class="text-center text-secondary mb-5">Explora nuestras soluciones de ciberseguridad e innovación tecnológica</p>
+            
+            <div class="masonry-bg-grid">
+                
+               
+
+                <!-- Card 2: Consulting (con imagen hover diferente) -->
+                <div class="bg-card-wrapper">
+                    <div class="bg-card tall" 
+                         style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80');"
+                         data-hover-image="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80">
+                        <div class="bg-card-overlay bg-card-overlay-awareness"></div>
+                        <div class="bg-card-content">
+                            <h3 class="bg-card-title">Consulting</h3>
+                            <p class="bg-card-text">Modernización de infraestructura y automatización de procesos</p>
+                            <a href="#" class="bg-card-btn">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cloud & DevOps -->
+                <div class="bg-card-wrapper">
+                    <div class="bg-card tall" 
+                         style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80');"
+                         data-hover-image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80">
+                        <div class="bg-card-overlay"></div>
+                        <div class="bg-card-content">
+                            <h3 class="bg-card-title">Cloud & DevOps</h3>
+                            <p class="bg-card-text">Modernización de infraestructura y automatización de procesos.</p>
+                            <a href="#" class="bg-card-btn">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: CyberDefense -->
+                <div class="bg-card-wrapper">
+                    <div class="bg-card short" 
+                         style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80');"
+                         data-hover-image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80">
+                        <div class="bg-card-overlay"></div>
+                        <div class="bg-card-content">
+                            <h3 class="bg-card-title">CyberDefense</h3>
+                            <p class="bg-card-text">Modernización de infraestructura y automatización de procesos.
+                            </p>
+                            <a href="#" class="bg-card-btn">Proteger</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Data -->
+                <div class="bg-card-wrapper">
+                    <div class="bg-card short" 
+                         style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80');"
+                         data-hover-image="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80">
+                        <div class="bg-card-overlay"></div>
+                        <div class="bg-card-content">
+                            <h3 class="bg-card-title">Data</h3>
+                            <p class="bg-card-text">Modernización de infraestructura y automatización de procesos.
+
+                            </p>
+                            <a href="#" class="bg-card-btn">Analizar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Identity -->
+                <div class="bg-card-wrapper">
+                    <div class="bg-card short" 
+                         style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80');"
+                         data-hover-image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80">
+                        <div class="bg-card-overlay"></div>
+                        <div class="bg-card-content">
+                            <h3 class="bg-card-title">Identity</h3>
+                            <p class="bg-card-text">Gestión de identidades y accesos con soluciones IAM robustas.</p>
+                            <a href="#" class="bg-card-btn">Gestionar</a>
+                        </div>
+                    </div>
+                </div>
+
+              
+
+                <!-- Card 8: Seguridad Avanzada -->
+                <div class="bg-card-wrapper">
+                    <div class="bg-card tall" 
+                         style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80');"
+                         data-hover-image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80">
+                        <div class="bg-card-overlay"></div>
+                        <div class="bg-card-content">
+                            <h3 class="bg-card-title">Seguridad Avanzada</h3>
+                            <p class="bg-card-text">Modernización de infraestructura y automatización de procesos.
+
+                            </p>
+                            <a href="#" class="bg-card-btn">Conocer más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9: Compliance -->
+                <div class="bg-card-wrapper">
+                    <div class="bg-card tall" 
+                         style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80');"
+                         data-hover-image="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80">
+                        <div class="bg-card-overlay"></div>
+                        <div class="bg-card-content">
+                            <h3 class="bg-card-title">Compliance</h3>
+                            <p class="bg-card-text">Cumplimiento normativo y auditorías de seguridad.</p>
+                            <a href="#" class="bg-card-btn">Cumplir</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Footer -->
     <footer class="rh-footer pt-5 pb-4">
         <div class="container">
             <div class="row">
@@ -808,6 +2005,234 @@
 
     <!-- Bootstrap JS Bundle CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Script para efecto hover de cambio de imagen en cards -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener todas las cards con atributo data-hover-image
+            const bgCards = document.querySelectorAll('.bg-card[data-hover-image]');
+            
+            bgCards.forEach(card => {
+                const hoverImageUrl = card.getAttribute('data-hover-image');
+                
+                // Pre-cargar la imagen de hover para evitar delay
+                const img = new Image();
+                img.src = hoverImageUrl;
+                
+                // Cuando la imagen esté cargada, aplicar el estilo al pseudo-elemento
+                img.onload = function() {
+                    // Crear un estilo dinámico para el pseudo-elemento ::before
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        .bg-card[data-hover-image="${hoverImageUrl}"]::before {
+                            background-image: url('${hoverImageUrl}');
+                        }
+                    `;
+                    document.head.appendChild(style);
+                };
+            });
+        });
+
+        // Script para Menú Aside con Contenido Dinámico y ScrollDispatcher
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.aside-menu .nav-link');
+            const contentSections = document.querySelectorAll('.aside-content-section');
+            const asideMenu = document.querySelector('.aside-menu');
+            let isScrolling = false;
+            let scrollTimeout = null;
+
+            // Función para activar un navlink y su contenido
+            function activateNavLink(link) {
+                const contentId = link.getAttribute('data-content-id');
+                
+                // Remover clase active de todos los navlinks
+                navLinks.forEach(nl => nl.classList.remove('active'));
+                
+                // Agregar clase active al navlink
+                link.classList.add('active');
+                
+                // Ocultar todas las secciones de contenido
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Mostrar la sección de contenido correspondiente
+                const targetSection = document.getElementById(contentId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            }
+
+            // Función para encontrar el navlink más centrado/visible en el viewport
+            function findCenteredNavLink() {
+                if (!asideMenu || window.innerWidth > 991.98) return null;
+                
+                const menuRect = asideMenu.getBoundingClientRect();
+                const menuCenter = menuRect.left + (menuRect.width / 2);
+                let closestLink = null;
+                let closestDistance = Infinity;
+                
+                navLinks.forEach(link => {
+                    const linkRect = link.getBoundingClientRect();
+                    const linkCenter = linkRect.left + (linkRect.width / 2);
+                    const distance = Math.abs(menuCenter - linkCenter);
+                    
+                    // Verificar si el link está visible en el viewport (parcialmente o completamente)
+                    // Un elemento está visible si alguna parte de él está dentro del viewport
+                    const isVisible = linkRect.right > menuRect.left && 
+                                     linkRect.left < menuRect.right;
+                    
+                    // Priorizar elementos que están más centrados y visibles
+                    if (isVisible && distance < closestDistance) {
+                        closestDistance = distance;
+                        closestLink = link;
+                    }
+                });
+                
+                return closestLink;
+            }
+
+            // ScrollDispatcher: Detectar scroll y activar el elemento centrado
+            function handleScroll() {
+                if (window.innerWidth > 991.98) return;
+                
+                isScrolling = true;
+                
+                // Limpiar timeout anterior
+                if (scrollTimeout) {
+                    clearTimeout(scrollTimeout);
+                }
+                
+                // Esperar a que termine el scroll para activar el elemento
+                scrollTimeout = setTimeout(() => {
+                    const centeredLink = findCenteredNavLink();
+                    if (centeredLink && !centeredLink.classList.contains('active')) {
+                        activateNavLink(centeredLink);
+                    }
+                    isScrolling = false;
+                }, 150); // Delay para evitar activaciones durante el scroll
+            }
+
+            // Función para verificar si hay scroll disponible y agregar clase
+            function checkScrollable() {
+                if (!asideMenu || window.innerWidth > 991.98) return;
+                
+                const hasScroll = asideMenu.scrollWidth > asideMenu.clientWidth;
+                if (hasScroll) {
+                    asideMenu.classList.add('scrollable');
+                } else {
+                    asideMenu.classList.remove('scrollable');
+                }
+            }
+
+            // Agregar listener de scroll al menú
+            if (asideMenu) {
+                asideMenu.addEventListener('scroll', handleScroll, { passive: true });
+                
+                // Verificar scroll disponible al cargar y al redimensionar
+                checkScrollable();
+                
+                // Mejorar el comportamiento táctil con eventos touch
+                let touchStartX = 0;
+                let touchStartY = 0;
+                let isHorizontalScroll = false;
+                
+                asideMenu.addEventListener('touchstart', function(e) {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+                    isHorizontalScroll = false;
+                }, { passive: true });
+                
+                asideMenu.addEventListener('touchmove', function(e) {
+                    if (!isHorizontalScroll) {
+                        const touchMoveX = e.touches[0].clientX;
+                        const touchMoveY = e.touches[0].clientY;
+                        const deltaX = Math.abs(touchMoveX - touchStartX);
+                        const deltaY = Math.abs(touchMoveY - touchStartY);
+                        
+                        // Determinar si el scroll es principalmente horizontal
+                        if (deltaX > deltaY && deltaX > 10) {
+                            isHorizontalScroll = true;
+                        }
+                    }
+                }, { passive: true });
+                
+                // Actualizar indicador de scroll cuando cambia el tamaño
+                const resizeObserver = new ResizeObserver(() => {
+                    checkScrollable();
+                });
+                
+                if (asideMenu) {
+                    resizeObserver.observe(asideMenu);
+                }
+            }
+
+            // Click en navlinks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Activar el navlink clickeado
+                    activateNavLink(this);
+                    
+                    // Auto-scroll del menú horizontal en mobile para centrar el item
+                    if (window.innerWidth <= 991.98) {
+                        const linkLeft = this.offsetLeft;
+                        const linkWidth = this.offsetWidth;
+                        const menuWidth = asideMenu.offsetWidth;
+                        
+                        // Calcular la posición para centrar el link
+                        const scrollTo = linkLeft - (menuWidth / 2) + (linkWidth / 2);
+                        
+                        asideMenu.scrollTo({
+                            left: scrollTo,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Después del scroll, asegurar que el elemento activo esté centrado
+                        setTimeout(() => {
+                            const centeredLink = findCenteredNavLink();
+                            if (centeredLink && centeredLink !== this) {
+                                activateNavLink(centeredLink);
+                            }
+                        }, 500);
+                    } else {
+                        // Scroll suave al inicio del contenido (solo en mobile)
+                        const contentId = this.getAttribute('data-content-id');
+                        const targetSection = document.getElementById(contentId);
+                        if (targetSection) {
+                            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+
+            // Inicializar: Activar el elemento centrado al cargar (solo en mobile)
+            if (window.innerWidth <= 991.98) {
+                setTimeout(() => {
+                    const centeredLink = findCenteredNavLink();
+                    if (centeredLink) {
+                        activateNavLink(centeredLink);
+                    }
+                }, 100);
+            }
+
+            // Manejar resize para re-inicializar si cambia a mobile
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    checkScrollable();
+                    if (window.innerWidth <= 991.98) {
+                        const centeredLink = findCenteredNavLink();
+                        if (centeredLink) {
+                            activateNavLink(centeredLink);
+                        }
+                    }
+                }, 250);
+            });
+        });
+    </script>
 </body>
 </html>
 <div class="lc-block collapse navbar-collapse" id="myNavbar3">
